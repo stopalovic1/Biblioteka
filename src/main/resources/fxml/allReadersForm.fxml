@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+  <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="5.0" minWidth="10.0" prefWidth="5.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="286.0" minWidth="10.0" prefWidth="272.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="209.0" minWidth="10.0" prefWidth="180.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="189.0" minWidth="94.0" prefWidth="130.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="189.0" minWidth="94.0" prefWidth="130.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="189.0" minWidth="94.0" prefWidth="130.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="5.0" minHeight="10.0" prefHeight="5.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="184.0" minHeight="10.0" prefHeight="148.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="200.0" minHeight="10.0" prefHeight="200.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="5.0" minHeight="10.0" prefHeight="5.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <TableView fx:id="tableViewReaders" prefHeight="184.0" prefWidth="474.0" GridPane.columnIndex="1" GridPane.columnSpan="4" GridPane.rowIndex="1" GridPane.rowSpan="2">
+        <columns>
+          <TableColumn fx:id="colReaderId" minWidth="50.0" prefWidth="50.0" resizable="false" text="ID" />
+          <TableColumn fx:id="colReaderName" minWidth="75.0" prefWidth="75.0" resizable="false" text="Ime" />
+            <TableColumn fx:id="colReaderSurname" minWidth="75.0" prefWidth="75.0" resizable="false" text="Prezime" />
+            <TableColumn fx:id="colReaderJmbg" minWidth="150.0" prefWidth="150.0" resizable="false" text="JMBG" />
+            <TableColumn fx:id="colReaderDateOfBirth" minWidth="100.0" prefWidth="100.0" resizable="false" text="Datum rodenja" />
+            <TableColumn fx:id="colReaderNoOfId" minWidth="100.0" prefWidth="100.0" resizable="false" text="Broj licne karte" />
+            <TableColumn fx:id="colReaderAdress" minWidth="95.0" prefWidth="95.0" resizable="false" text="Adresa" />
+            <TableColumn fx:id="colReaderPhoneNumber" minWidth="105.0" prefWidth="105.0" resizable="false" text="Broj telefona" />
+        </columns>
+      </TableView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="145.0" stroke="#80808080" strokeType="INSIDE" width="110.0" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+         <GridPane.margin>
+            <Insets bottom="25.0" />
+         </GridPane.margin></Rectangle>
+      <Button mnemonicParsing="false" onAction="#addReaderButton" prefHeight="25.0" prefWidth="95.0" text="Dodaj citalaca" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+         <GridPane.margin>
+            <Insets top="10.0" />
+         </GridPane.margin>
+      </Button>
+      <Button mnemonicParsing="false" onAction="#updateSelectedReaderButton" prefHeight="42.0" prefWidth="95.0" text="Azuriraj citalaca" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+         <GridPane.margin>
+            <Insets top="40.0" />
+         </GridPane.margin>
+      </Button>
+      <Button mnemonicParsing="false" onAction="#deleteSelectedReaderButton" prefWidth="95.0" text="Obrisi citalaca" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets top="20.0" />
+         </GridPane.margin>
+      </Button>
+      <Button mnemonicParsing="false" onAction="#exitReadersMenuButton" prefWidth="95.0" text="Izlaz" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+         <GridPane.margin>
+            <Insets top="80.0" />
+         </GridPane.margin>
+      </Button>
+   </children>
+</GridPane>

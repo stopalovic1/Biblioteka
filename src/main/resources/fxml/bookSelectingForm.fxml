@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="5.0" minWidth="10.0" prefWidth="5.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="286.0" minWidth="10.0" prefWidth="272.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="209.0" minWidth="10.0" prefWidth="180.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="189.0" minWidth="94.0" prefWidth="130.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="189.0" minWidth="94.0" prefWidth="130.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="189.0" minWidth="94.0" prefWidth="130.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints maxHeight="5.0" minHeight="10.0" prefHeight="5.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="184.0" minHeight="10.0" prefHeight="148.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="200.0" minHeight="10.0" prefHeight="200.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="5.0" minHeight="10.0" prefHeight="5.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <TableView fx:id="tableViewBooks" prefHeight="184.0" prefWidth="474.0" GridPane.columnIndex="1" GridPane.columnSpan="4" GridPane.rowIndex="1" GridPane.rowSpan="2">
+            <columns>
+                <TableColumn fx:id="colBookId" minWidth="50.0" prefWidth="50.0" resizable="false" text="ID" />
+                <TableColumn fx:id="colBookName" minWidth="75.0" prefWidth="110.0" resizable="false" text="Naziv knjige" />
+                <TableColumn fx:id="colBookAuthor" minWidth="74.0" prefWidth="94.0" resizable="false" text="Autor knjige" />
+                <TableColumn fx:id="colBookIsbn" minWidth="81.0" prefWidth="104.0" resizable="false" text="ISBN" />
+                <TableColumn fx:id="colBookYearOfIssue" minWidth="98.0" prefWidth="108.0" resizable="false" text="Godina izdavanja" />
+                <TableColumn fx:id="colBookNumberOfPages" minWidth="81.0" prefWidth="82.0" resizable="false" text="Broj stranica" />
+                <TableColumn fx:id="colBookDateOfPurchase" minWidth="89.0" prefWidth="108.0" resizable="false" text="Datum kupovine" />
+                <TableColumn fx:id="colBookPrice" minWidth="57.0" prefWidth="61.0" resizable="false" text="Cijena" />
+                <TableColumn fx:id="colBookNumberOfSamples" prefWidth="107.0" text="Broj primjeraka" />
+            </columns>
+        </TableView>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="70.0" stroke="#80808080" strokeType="INSIDE" width="110.0" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+         <GridPane.margin>
+            <Insets bottom="105.0" />
+         </GridPane.margin></Rectangle>
+        <Button mnemonicParsing="false" onAction="#bookIssueOk" prefHeight="25.0" prefWidth="95.0" text="OK" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+            <GridPane.margin>
+                <Insets top="10.0" />
+            </GridPane.margin>
+        </Button>
+        <Button mnemonicParsing="false" onAction="#bookIssueClose" prefHeight="25.0" prefWidth="95.0" text="Izlaz" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+            <GridPane.margin>
+                <Insets top="40.0" />
+            </GridPane.margin>
+        </Button>
+    </children>
+</GridPane>
